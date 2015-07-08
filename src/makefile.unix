@@ -45,7 +45,7 @@ LIBS+= \
  -Wl,-B$(LMODE2) \
    -l z \
    -l dl \
-   -l pthread
+   -l pthread \
    -Wl,-rpath,/usr/local/include -L/usr/local/include -lsecp256k1
 
 # Hardening
