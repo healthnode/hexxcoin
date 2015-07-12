@@ -113,8 +113,14 @@ public:
 
 
         vSeeds.push_back(CDNSSeedData("seed1", "94.254.73.95"));
-        vSeeds.push_back(CDNSSeedData("seed2", "108.61.103.195"));
+        vSeeds.push_back(CDNSSeedData("seed2", "108.61.198.84"));
         vSeeds.push_back(CDNSSeedData("seed3", "2.244.164.160"));
+        vSeeds.push_back(CDNSSeedData("seed4", "108.61.99.205"));
+        vSeeds.push_back(CDNSSeedData("seed5", "178.33.126.221"));
+        vSeeds.push_back(CDNSSeedData("seed6", "2.244.164.160"));
+        vSeeds.push_back(CDNSSeedData("seed7", "46.59.62.165"));
+        vSeeds.push_back(CDNSSeedData("seed8", "74.77.15.47"));
+
 
 
         base58Prefixes[PUBKEY_ADDRESS] = list_of(40);
