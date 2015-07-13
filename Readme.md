@@ -4,7 +4,7 @@ Blockchain specs 1 block per minute Retarget every block
 
 PoW Stage Algo : scrypt First 60 blocks reward : 0 HXX Next blocks reward : 50 HXX Last PoW block : 10300
 
-PoS Stage Starts at block : 10000 Annual interest : 25% Minimum Age : 4 Hours Maturity : 50 Blocks
+PoS Stage Starts at block : 10000 Annual interest : 25% Minimum Age : "InstaStake" Maturity : 50 Blocks
 
 Masternode Collateral : 10000 HXX Reward : 1 HXX
 
