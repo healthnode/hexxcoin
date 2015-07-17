@@ -12,7 +12,6 @@
 #include "walletdb.h"
 #include "wallet.h"
 #include "init.h"
-#include "guiutil.h"
 
 #include <QAbstractItemDelegate>
 #include <QPainter>
@@ -222,7 +221,7 @@ void MasternodeManager::on_copyAddressButton_clicked()
     int r = index.row();
     std::string sCollateralAddress = ui->tableWidget_2->item(r, 3)->text().toStdString();
 
-    GUIUtil::setClipboard(QString::fromStdString(sCollateralAddress));
+    QApplication::clipboard()->setText(QString::fromStdString(sCollateralAddress));
 }
 
 void MasternodeManager::on_editButton_clicked()

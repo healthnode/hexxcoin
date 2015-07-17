@@ -74,7 +74,7 @@ string strMasterNodeAddr = "";
 bool fLiteMode = false;
 int nInstantXDepth = 1;
 int nDarksendRounds = 2;
-int nAnonymizeHXXAmount = 50000;
+int nAnonymizeHXXAmount = 10000;
 int nLiquidityProvider = 0;
 /** Spork enforcement enabled time */
 int64_t enforceMasternodePaymentsTime = 4085657524;
