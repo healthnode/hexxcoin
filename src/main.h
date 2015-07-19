@@ -20,9 +20,9 @@ class CValidationState;
 #define START_MASTERNODE_PAYMENTS_TESTNET 1428034047 //Fri, 09 Jan 2015 21:05:58 GMT
 #define START_MASTERNODE_PAYMENTS 1428537599 //Wed, 8 April 2015 23:59:59 GMT
 
-static const int64_t DARKSEND_COLLATERAL = (50000*COIN);
-static const int64_t DARKSEND_FEE = (0.999*COIN);
-static const int64_t DARKSEND_POOL_MAX = (49999.99*COIN);
+static const int64_t DARKSEND_COLLATERAL = (10000*COIN);
+static const int64_t DARKSEND_FEE = (0*COIN);
+static const int64_t DARKSEND_POOL_MAX = (99999.99*COIN);
 
 /*
     At 15 signatures, 1/2 of the masternode network can be owned by
@@ -88,7 +88,7 @@ static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20
 
 inline int64_t FutureDrift(int64_t nTime) { return nTime + 120; }
 
-inline unsigned int GetTargetSpacing(int nHeight) { return 64; }
+inline unsigned int GetTargetSpacing(int nHeight) { return 60; }
 
 extern CScript COINBASE_FLAGS;
 extern CCriticalSection cs_main;
