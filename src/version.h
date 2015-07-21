@@ -36,7 +36,7 @@ static const int PROTOCOL_VERSION = 60029;
 static const int INIT_PROTO_VERSION = 209;
 
 // disconnect from peers older than this proto version
-static const int MIN_PEER_PROTO_VERSION = 60027;
+static const int MIN_PEER_PROTO_VERSION = 60029;
 
 static const int MIN_INSTANTX_PROTO_VERSION = 60020;
 
@@ -48,7 +48,7 @@ static const int CADDR_TIME_VERSION = 31402;
 
 // only request blocks from nodes outside this range of versions
 static const int NOBLKS_VERSION_START = 0;
-static const int NOBLKS_VERSION_END = 60026;
+static const int NOBLKS_VERSION_END = 60028;
 
 // BIP 0031, pong message, is enabled for all versions AFTER this one
 static const int BIP0031_VERSION = 60000;
