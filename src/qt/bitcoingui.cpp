@@ -98,7 +98,6 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
 #endif
     setObjectName("hexx");
-    setStyleSheet("#hexx { background-color: qradialgradient(cx: -0.8, cy: 0, fx: -0.8, fy: 0, radius: 1.4, stop: 0 #efefef, stop: 1 #dedede);  }");
 
     // Accept D&D of URIs
     setAcceptDrops(true);
@@ -194,10 +193,10 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     statusBar()->addWidget(progressBar);
     statusBar()->addPermanentWidget(frameBlocks);
 
-    connect(openRPCConsoleAction, SIGNAL(triggered()), rpcConsole, SLOT(showConsole()));
+//    connect(openRPCConsoleAction, SIGNAL(triggered()), rpcConsole, SLOT(showConsole()));
 
     // prevents an oben debug window from becoming stuck/unusable on client shutdown
-    connect(quitAction, SIGNAL(triggered()), rpcConsole, SLOT(hide()));
+//    connect(quitAction, SIGNAL(triggered()), rpcConsole, SLOT(hide()));
 
     // Install event filter to be able to catch status tip events (QEvent::StatusTip)
     this->installEventFilter(this);
@@ -279,7 +278,7 @@ void BitcoinGUI::createActions()
     tabGroup->addAction(addressBookAction);
 
     masternodeManagerAction = new QAction(QIcon(":/icons/hexx"), tr("&Hexx Net"), this);
-    masternodeManagerAction->setToolTip(tr("Show Panaces network nodes status and configure your nodes."));
+    masternodeManagerAction->setToolTip(tr("Show Hexx network nodes status and configure your nodes."));
     masternodeManagerAction->setCheckable(true);
     masternodeManagerAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
     tabGroup->addAction(masternodeManagerAction);
@@ -404,10 +403,20 @@ void BitcoinGUI::createToolBars()
     toolbar->addAction(addressBookAction);
     toolbar->addAction(masternodeManagerAction);
 
-    //  toolbar->setOrientation(Qt::Horizontal);
-    toolbar->setMovable(true);
+    toolbar->setOrientation(Qt::Vertical);
+    toolbar->setMovable(false);
 
-    addToolBar(Qt::TopToolBarArea, toolbar);
+    addToolBar(Qt::LeftToolBarArea, toolbar);
+
+    int w = 0;
+
+    foreach(QAction *action, toolbar->actions()) {
+        w = std::max(w, toolbar->widgetForAction(action)->width());
+    }
+
+    foreach(QAction *action, toolbar->actions()) {
+        toolbar->widgetForAction(action)->setFixedWidth(w);
+    }
 }
 
 void BitcoinGUI::setClientModel(ClientModel *clientModel)
