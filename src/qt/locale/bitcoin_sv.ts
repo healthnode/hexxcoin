@@ -15,10 +15,10 @@
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Hexx developers</source>
+Copyright © 2015 The Hexx developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Hexx developers</translation>
+Copyright © 2015 The Hexx developers</translation>
     </message>
     <message>
         <location line="+15"/>

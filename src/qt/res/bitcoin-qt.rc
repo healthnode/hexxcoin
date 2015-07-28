@@ -18,7 +18,7 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Hexx"
+            VALUE "CompanyName",        "HEXX"
             VALUE "FileDescription",    "Hexx-Qt (OSS GUI client for Hexx)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "hexx-qt"

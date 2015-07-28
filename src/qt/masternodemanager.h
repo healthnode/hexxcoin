@@ -32,7 +32,7 @@ public:
 
 public slots:
     void updateNodeList();
-    void updateMNode(QString alias, QString addr, QString privkey, QString collateral);
+    void updateMNode(QString alias, QString addr, QString privkey, QString collateral, QString local);
 
 signals:
 
@@ -41,7 +41,7 @@ private:
     Ui::MasternodeManager *ui;
     ClientModel *clientModel;
     WalletModel *walletModel;
-    CCriticalSection cs_pcnodes;
+    CCriticalSection cs_node;
     void subscribeToCoreSignals();
     void unsubscribeFromCoreSignals();
 
@@ -50,6 +50,7 @@ private slots:
     void on_createButton_clicked();
     void on_editButton_clicked();
     void on_getConfigButton_clicked();
+    void on_localButton_clicked();
     void on_startButton_clicked();
     void on_stopButton_clicked();
     void on_startAllButton_clicked();

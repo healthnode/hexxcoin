@@ -98,6 +98,7 @@ public:
     std::string sAddress;
     std::string sCollateralAddress;
     std::string sMasternodePrivKey;
+    bool isLocal;
 
     CMNodeConfig()
     {
@@ -110,6 +111,7 @@ public:
         READWRITE(sAddress);
         READWRITE(sCollateralAddress);
 	READWRITE(sMasternodePrivKey);
+        READWRITE(isLocal);
     )
 };
 

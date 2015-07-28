@@ -364,6 +364,7 @@ bool
 ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
              CWalletScanState &wss, string& strType, string& strErr)
 {
+
     try {
         // Unserialize
         // Taking advantage of the fact that pair serialization
@@ -623,6 +624,7 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
     }
     return true;
 }
+
 
 static bool IsKeyType(string strType)
 {

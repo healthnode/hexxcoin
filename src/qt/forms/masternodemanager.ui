@@ -34,7 +34,7 @@
      <item>
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>0</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
@@ -143,6 +143,13 @@
               </widget>
              </item>
              <item>
+              <widget class="QPushButton" name="localButton">
+               <property name="text">
+                <string>Create &amp;Local</string>
+               </property>
+              </widget>
+             </item>
+             <item>
               <widget class="QPushButton" name="copyAddressButton">
                <property name="text">
                 <string>Copy &amp;Address</string>
@@ -194,6 +201,11 @@
              <column>
               <property name="text">
                <string>Status</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Local</string>
               </property>
              </column>
              <column>

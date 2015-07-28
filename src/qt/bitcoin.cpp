@@ -3,7 +3,6 @@
  */
 
 #include <QApplication>
-
 #include "bitcoingui.h"
 #include "clientmodel.h"
 #include "walletmodel.h"
@@ -174,6 +173,7 @@ int main(int argc, char *argv[])
         app.setApplicationName("Hexx-Qt-testnet");
     else
         app.setApplicationName("Hexx-Qt");
+
 
     // ... then GUI settings:
     OptionsModel optionsModel;
