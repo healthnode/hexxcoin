@@ -555,6 +555,12 @@ void ThreadStakeMiner(CWallet *pwallet)
             }
         }
 
+        if (fMasterNode)
+        {
+            MilliSleep(10000);
+            continue;
+        }
+
         //
         // Create new block
         //
