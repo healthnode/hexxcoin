@@ -22,7 +22,7 @@ class CValidationState;
 
 static const int64_t DARKSEND_COLLATERAL = (10000*COIN);
 static const int64_t DARKSEND_FEE = (0*COIN);
-static const int64_t DARKSEND_POOL_MAX = (99999.99*COIN);
+static const int64_t DARKSEND_POOL_MAX = (9999.9*COIN);
 
 /*
     At 15 signatures, 1/2 of the masternode network can be owned by
