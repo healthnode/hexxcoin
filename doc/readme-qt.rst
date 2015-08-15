@@ -24,7 +24,7 @@ then execute the following:
     qmake
     make
 
-Alternatively, install Qt Creator and open the `hexx-qt.pro` file.
+Alternatively, install Qt Creator and open the `hexxcoin-qt.pro` file.
 
 An executable named `hexx-qt` will be built.
 

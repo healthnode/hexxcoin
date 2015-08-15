@@ -737,7 +737,7 @@ DBErrors CWalletDB::LoadWallet(CWallet* pwallet)
 void ThreadFlushWalletDB(const string& strFile)
 {
     // Make this thread recognisable as the wallet flushing thread
-    RenameThread("hexx-wallet");
+    RenameThread("HexxCoin-wallet");
 
     static bool fOneThread;
     if (fOneThread)

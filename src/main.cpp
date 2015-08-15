@@ -3112,7 +3112,7 @@ struct CImportingNow
 
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
-    RenameThread("hexx-loadblk");
+    RenameThread("hexxcoin-loadblk");
 
     CImportingNow imp;
 

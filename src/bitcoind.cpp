@@ -50,7 +50,7 @@ bool AppInit(int argc, char* argv[])
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
             // First part of help message is specific to bitcoind / RPC client
-            std::string strUsage = _("Hexx version") + " " + FormatFullVersion() + "\n\n" +
+            std::string strUsage = _("HexxCoin version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
                   "  hexxd [options]                     " + "\n" +
                   "  hexxd [options] <command> [params]  " + _("Send command to -server or hexxd") + "\n" +
@@ -65,7 +65,7 @@ bool AppInit(int argc, char* argv[])
 
         // Command-line RPC
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "hexx:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "hexxcoin:"))
                 fCommandLine = true;
 
         if (fCommandLine)
