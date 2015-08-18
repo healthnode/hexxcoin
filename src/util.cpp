@@ -1043,7 +1043,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "hexxcoin";
+    const char* pszModule = "hexx";
 #endif
     if (pex)
         return strprintf(
@@ -1076,7 +1076,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Windows < Vista: C:\Documents and Settings\Username\Application Data\Hexx
     // Windows >= Vista: C:\Users\Username\AppData\Roaming\Hexx
     // Mac: ~/Library/Application Support/Hexx
-    // Unix: ~/.Hexx
+    // Unix: ~/.hexx
 #ifdef WIN32
     // Windows
     return GetSpecialFolderPath(CSIDL_APPDATA) / "Hexx";
@@ -1094,7 +1094,7 @@ boost::filesystem::path GetDefaultDataDir()
     return pathRet / "Hexx";
 #else
     // Unix
-    return pathRet / ".Hexx";
+    return pathRet / ".hexx";
 #endif
 #endif
 }

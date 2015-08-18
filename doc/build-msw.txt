@@ -76,7 +76,7 @@ make -f Makefile.mingw
 mkdir miniupnpc
 cp *.h miniupnpc/
 
-hexxcoin
+hexx
 -------
 DOS prompt:
 cd \hexx\src
