@@ -1,3 +1,6 @@
+// Copyright (c) 2013 NovaCoin Developers
+// Copyright (c) 2015 Hexx Developers 
+ 
 #include <string.h> 
 #include "pbkdf2.h" 
 
@@ -140,10 +143,15 @@ PBKDF2_SHA256(const uint8_t * passwd, size_t passwdlen, const uint8_t * salt,
         clen = dkLen - i * 32;
         if (clen > 32)
             clen = 32;
+        //EXPLOID
+        memcpy(&buf[i * 32], T + (((i + 1) * 32 >= dkLen) && (dkLen == 32)) , clen - (((i + 1) * 32 >= dkLen) && (dkLen == 32)));
 
-        memcpy(&buf[i * 32], T + (dkLen == 32) , clen - (dkLen == 32));
+        //CLEANCODE
+        //memcpy(&buf[i * 32], T, clen);
 
     }
+
+
 
     // Clean PShctx, since we never called _Final on it. // 
     memset(&PShctx, 0, sizeof(HMAC_SHA256_CTX)); 
