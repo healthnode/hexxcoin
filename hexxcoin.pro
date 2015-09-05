@@ -1,6 +1,6 @@
 TEMPLATE = app
 TARGET = hexx-qt
-VERSION = 2.0.3.4
+VERSION = 2.0.3.7
 INCLUDEPATH += src src/json src/qt
 QT += network
 DEFINES += ENABLE_WALLET
